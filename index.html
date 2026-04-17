@@ -53,13 +53,12 @@
     100% { transform: translate(80px, 80px); }
   }
 
-  /* custom neon glow */
   :root {
     --cyan-glow: 0 0 8px rgba(0, 255, 255, 0.6), 0 0 20px rgba(0, 210, 255, 0.4);
     --card-border: rgba(0, 255, 255, 0.25);
   }
 
-  /* NAVBAR – glassmorphism + floating */
+  /* NAVBAR */
   header {
     position: fixed;
     width: 100%;
@@ -178,18 +177,15 @@
       font-size: 1.2rem !important;
     }
     .project-title {
-      font-size: 1.2rem !important;
+      font-size: 1.3rem !important;
     }
     .skills-grid {
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)) !important;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)) !important;
       gap: 1rem !important;
     }
     .contact-wrapper {
       padding: 1.5rem !important;
       margin: 1rem !important;
-    }
-    .input-group input, .input-group textarea {
-      padding: 0.8rem 1rem !important;
     }
   }
 
@@ -208,16 +204,13 @@
       padding: 1rem !important;
     }
     .project-item {
-      padding: 1rem !important;
+      padding: 1.2rem !important;
     }
     .skill-card i {
       font-size: 2rem !important;
     }
     .skill-card h4 {
-      font-size: 1.1rem !important;
-    }
-    .skill-card p {
-      font-size: 0.8rem !important;
+      font-size: 1rem !important;
     }
   }
 
@@ -271,7 +264,6 @@
     }
   }
 
-  /* Section Styling */
   section {
     padding: 100px 24px 80px;
     max-width: 1280px;
@@ -297,7 +289,7 @@
     padding-bottom: 8px;
   }
 
-  /* Education cards - new stylish academic timeline */
+  /* Education cards */
   .education-container {
     display: flex;
     flex-direction: column;
@@ -420,10 +412,10 @@
     color: #cbdff2;
   }
 
-  /* Skills Grid Enhanced */
+  /* Skills Grid - Updated (No DSA) */
   .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
   }
@@ -463,53 +455,71 @@
     background: rgba(0, 200, 255, 0.08);
   }
 
-  /* Projects - modern glassmorphism + hover reveal */
+  /* Projects - Single Project Highlight */
   .projects-container {
-    display: flex;
-    flex-direction: column;
-    gap: 1.8rem;
-    margin-top: 2rem;
+    max-width: 800px;
+    margin: 2rem auto 0;
   }
 
   .project-item {
     background: rgba(10, 20, 35, 0.7);
     backdrop-filter: blur(5px);
     border-radius: 1.5rem;
-    padding: 1.5rem 2rem;
+    padding: 2rem 2rem;
     border-left: 5px solid #0ff;
     transition: 0.25s ease;
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    text-align: center;
   }
 
   .project-item:hover {
-    transform: translateX(10px) scale(1.01);
+    transform: translateY(-5px) scale(1.01);
     background: rgba(20, 40, 65, 0.85);
-    border-left-width: 8px;
-    box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+    border-left-width: 5px;
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.3);
   }
 
   .project-title {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     font-weight: 700;
     color: #9effff;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 12px;
     flex-wrap: wrap;
   }
 
   .project-title i {
-    font-size: 1.7rem;
+    font-size: 2rem;
     color: cyan;
   }
 
   .project-desc {
-    margin-top: 10px;
+    margin-top: 15px;
     color: #ccdeff;
-    line-height: 1.5;
+    line-height: 1.6;
+    font-size: 1rem;
   }
 
-  /* Contact - modern form */
+  .project-tech {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .project-tech span {
+    background: rgba(0, 255, 255, 0.15);
+    padding: 5px 14px;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    color: #0ff;
+    border: 0.5px solid rgba(0,255,255,0.4);
+  }
+
+  /* Contact */
   .contact-wrapper {
     max-width: 700px;
     margin: 2rem auto;
@@ -566,7 +576,6 @@
     background: #0ff;
   }
 
-  /* floating socials - linkedin & github */
   .social-mini {
     display: flex;
     justify-content: center;
@@ -595,7 +604,6 @@
     font-size: 0.9rem;
   }
 
-  /* scroll reveal effect */
   .reveal {
     opacity: 0;
     transform: translateY(25px);
@@ -638,7 +646,7 @@
       <i class="fas fa-laptop-code"></i> B.Tech CSE Student · Future Software Engineer · Sopra Steria Scholar 2025
     </div>
     <p style="max-width: 600px; margin: 1rem auto; color: #b8d0ff;">Passionate about technology, coding, and innovation. Building smart solutions that make a real impact.</p>
-    <a href="#projects" class="cyber-btn"><i class="fas fa-arrow-down"></i> Explore My Work</a>
+    <a href="#projects" class="cyber-btn"><i class="fas fa-arrow-down"></i> View My Project</a>
   </div>
 </section>
 
@@ -646,7 +654,7 @@
 <section id="about">
   <div class="section-title"><span>⚡ About Me</span></div>
   <div class="about-card reveal">
-    <p><i class="fas fa-quote-left" style="color:cyan; margin-right:8px;"></i> I'm a B.Tech Computer Science & Engineering student at Gautam Buddha University, driven by the passion to solve real-world problems through code. I'm a Sopra Steria Scholar (Batch 2025) and constantly explore new technologies. I enjoy building practical applications, contributing to open source, and learning new things every day. Open to volunteer for Education, Science & Technology causes.</p>
+    <p><i class="fas fa-quote-left" style="color:cyan; margin-right:8px;"></i> I'm a B.Tech Computer Science & Engineering student at Gautam Buddha University, driven by the passion to solve real-world problems through code. I'm a Sopra Steria Scholar (Batch 2025) and constantly explore new technologies. I enjoy building practical applications and learning new things every day. Open to volunteer for Education, Science & Technology causes.</p>
     <div style="margin-top: 1.5rem; display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
       <span class="chip-badge"><i class="fas fa-code"></i> Problem Solver</span>
       <span class="chip-badge"><i class="fas fa-robot"></i> Tech Enthusiast</span>
@@ -655,11 +663,10 @@
   </div>
 </section>
 
-<!-- EDUCATION Section - Manjesh's details -->
+<!-- EDUCATION Section -->
 <section id="education">
   <div class="section-title"><span>📖 Academic Journey</span></div>
   <div class="education-container">
-    <!-- Gautam Buddha University Card -->
     <div class="edu-card reveal">
       <div class="edu-header">
         <div class="edu-institution"><i class="fas fa-university"></i> Gautam Buddha University, Greater Noida</div>
@@ -670,12 +677,11 @@
       </div>
       <div class="edu-activities">
         <i class="fas fa-bolt" style="color:cyan; margin-right:6px;"></i> Activities: Programming, Problem Solving, Tech Clubs
-        <div style="margin-top: 8px;">🌟 Focused on Java, Python, C programming, and DSA. Always eager to learn, grow, and contribute to the world of technology.</div>
+        <div style="margin-top: 8px;">🌟 Focused on Java, Python, and C programming. Always eager to learn, grow, and contribute to the world of technology.</div>
         <div style="margin-top: 8px;"><span class="chip-badge"><i class="fas fa-code"></i> Computer Science</span> <span class="chip-badge"><i class="fas fa-brain"></i> Problem Solving</span></div>
       </div>
     </div>
 
-    <!-- Panchsheel Balak Inter College Card -->
     <div class="edu-card reveal">
       <div class="edu-header">
         <div class="edu-institution"><i class="fas fa-school"></i> Panchsheel Balak Inter College</div>
@@ -693,25 +699,35 @@
   </div>
 </section>
 
-<!-- SKILLS Section - Manjesh's skills -->
+<!-- SKILLS Section - No DSA -->
 <section id="skills">
-  <div class="section-title"><span>🧠 Core Arsenal</span></div>
+  <div class="section-title"><span>🧠 Tech Skills</span></div>
   <div class="skills-grid">
-    <div class="skill-card reveal"><i class="fab fa-java"></i><h4>Java</h4><p>Object Oriented Programming, DSA</p></div>
-    <div class="skill-card reveal"><i class="fab fa-python"></i><h4>Python</h4><p>Scripting, Automation, Problem Solving</p></div>
-    <div class="skill-card reveal"><i class="fas fa-code"></i><h4>C Programming</h4><p>Procedural Programming, Algorithms</p></div>
-    <div class="skill-card reveal"><i class="fas fa-code-branch"></i><h4>VS Code</h4><p>Primary IDE for development</p></div>
+    <div class="skill-card reveal"><i class="fab fa-java"></i><h4>Java</h4><p>Object Oriented Programming</p></div>
+    <div class="skill-card reveal"><i class="fab fa-python"></i><h4>Python</h4><p>Scripting & Automation</p></div>
+    <div class="skill-card reveal"><i class="fas fa-code"></i><h4>C Programming</h4><p>Procedural Programming</p></div>
+    <div class="skill-card reveal"><i class="fas fa-code-branch"></i><h4>VS Code</h4><p>Primary IDE</p></div>
   </div>
 </section>
 
-<!-- PROJECTS Section - Manjesh's projects (placeholder - aap apne projects daal sakte ho) -->
+<!-- PROJECTS Section - Only RFID Door Lock System -->
 <section id="projects">
-  <div class="section-title"><span>🚀 My Projects</span></div>
+  <div class="section-title"><span>🚀 Featured Project</span></div>
   <div class="projects-container">
-    <div class="project-item reveal"><div class="project-title"><i class="fas fa-calculator"></i> 📊 Student Management System</div><div class="project-desc">Java-based application to manage student records, attendance, and grades. Implements OOP concepts and file handling.</div></div>
-    <div class="project-item reveal"><div class="project-title"><i class="fas fa-chart-line"></i> 📈 Data Analysis with Python</div><div class="project-desc">Python scripts for analyzing datasets using pandas and matplotlib. Extracted meaningful insights from raw data.</div></div>
-    <div class="project-item reveal"><div class="project-title"><i class="fas fa-tasks"></i> ✅ To-Do List App</div><div class="project-desc">Web-based task manager using HTML, CSS, and JavaScript. Local storage integration for saving tasks.</div></div>
-    <div class="project-item reveal"><div class="project-title"><i class="fas fa-database"></i> 🗄️ Library Management System</div><div class="project-desc">C program for library book tracking, issue/return system, and fine calculation.</div></div>
+    <div class="project-item reveal">
+      <div class="project-title">
+        <i class="fas fa-door-closed"></i> 🔐 RFID Door Lock System
+      </div>
+      <div class="project-desc">
+        An IoT-based smart security system using RFID technology for access control. The system uses an RFID reader to scan authorized cards and unlocks the door using a servo motor. Real-time access logs are maintained and can be monitored remotely.
+      </div>
+      <div class="project-tech">
+        <span><i class="fas fa-microchip"></i> Arduino</span>
+        <span><i class="fas fa-id-card"></i> RFID RC522</span>
+        <span><i class="fas fa-server"></i> Servo Motor</span>
+        <span><i class="fas fa-code"></i> Embedded C</span>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -727,11 +743,9 @@
       <p id="formFeedback" style="margin-top: 12px; font-size: 0.85rem; text-align: center;"></p>
     </form>
     <div class="social-mini">
-      <!-- LinkedIn - Updated -->
       <a href="https://www.linkedin.com/in/manjeshkumar123/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
         <i class="fab fa-linkedin-in"></i>
       </a>
-      <!-- GitHub - Updated -->
       <a href="https://github.com/Manjesh-code" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
         <i class="fab fa-github"></i>
       </a>
@@ -744,7 +758,6 @@
 </footer>
 
 <script>
-  // smooth scrolling + active nav highlight
   const sections = document.querySelectorAll("section");
   const navLinks = document.querySelectorAll(".nav-link");
 
@@ -769,7 +782,6 @@
   window.addEventListener("scroll", updateActiveSection);
   window.addEventListener("load", updateActiveSection);
 
-  // scroll reveal observer
   const revealElements = document.querySelectorAll('.reveal');
   const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -780,7 +792,6 @@
   }, { threshold: 0.15 });
   revealElements.forEach(el => revealObserver.observe(el));
 
-  // form handling
   const form = document.getElementById("contactForm");
   const feedback = document.getElementById("formFeedback");
 
@@ -788,7 +799,6 @@
     e.preventDefault();
     const name = document.getElementById("nameInput").value.trim();
     const email = document.getElementById("emailInput").value.trim();
-    const msg = document.getElementById("msgInput").value.trim();
 
     if(name === "" || email === "") {
       feedback.innerHTML = "⚠️ Please fill name and email.";
@@ -810,7 +820,6 @@
     setTimeout(() => { feedback.innerHTML = ""; }, 4000);
   });
 
-  // smooth scroll for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       const targetId = this.getAttribute('href');
